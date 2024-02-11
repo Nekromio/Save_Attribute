@@ -34,3 +34,7 @@ sm_saveattribute_time_check "10.0"
 // -
 sm_saveattribute_time_out "300"
 ```
+
+База данных создаётся автоматически по пути /cstrike/addons/sourcemod/data/sqlite/SaveAttribute.sq3
+
+Требования Sourcemod 1.10 и выше
