@@ -40,7 +40,7 @@ public Plugin myinfo =
 	name = "[Any] Save Attribute",
 	author = "Nek.'a 2x2 | ggwp.site ",
 	description = "Сохранение денег/фрагов/смертей при выходе с сервера",
-	version = "1.0.0",
+	version = "1.0.1",
 	url = "https://ggwp.site/"
 };
 
@@ -86,16 +86,12 @@ public void OnConfigsExecuted()
 {
 	Custom_SQLite();
 	hTimerCheck = CreateTimer(cvTimeCheck.FloatValue, Timer_CheckClientOut, _, TIMER_REPEAT);
+	ResetData();
 }
 
 public void OnMapEnd()
 {
     delete hTimerCheck;
-}
-
-public void OnMapStart()
-{
-	ResetData();
 }
 
 void CheckCvar(ConVar convar, const char[] oldValue, const char[] newValue)
